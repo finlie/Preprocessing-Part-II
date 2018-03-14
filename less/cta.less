@@ -4,10 +4,10 @@
     display: flex;
     margin-top: 72px;
     justify-content: flex-end;
-    @medium {
+    @media @medium {
       justify-content: center;
     }
-    @small {
+    @media @small {
       margin-top: 50px;
       display: flex;
       flex-direction: column;
@@ -23,12 +23,12 @@
         flex-flow: column;
         align-items: center;
         margin: 0 82px 0 0;
-        .skew;
-        @large {
-          margin 0 5% 0 0 ;
+        .skew(20deg);
+        @media @large {
+          margin: 0 5% 0 0 ;
         }
-        @margin {
-
+        @media @small {
+          margin: 0;
         }
     }
 
@@ -40,7 +40,7 @@
         height: 32px;
         margin-top: 10px;
         cursor: pointer;
-        .rotate;
+        @rotate: (25deg);
 
         &:hover {
             background: black;

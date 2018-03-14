@@ -3,27 +3,24 @@
 header {
     width: 100%;
     display: flex;
-    .border-radius;
-    @medium {
+    @media @medium {
       flex-wrap: wrap;
     }
-    @small {
+    @media @small {
       flex-wrap: wrap;
       justify-content: center;
     }
-
-
-
+  }
     nav {
       margin-top: 40px;
       width: 610px;
       justify-content: space-between;
       display: flex;
       .box-shadow(0px 5px 10px rgba(0,0,0,0.5));
-      @medium {
+      @media @medium {
         width: 100%;
       }
-      @media @phone {
+      @media @small {
        flex-direction: column;
         width: 100%;
         display: flex;
@@ -33,37 +30,35 @@ header {
       a {
         text-decoration: none;
         color: #b0b0b0;
-        @small {
+        @media @small {
           width: 100%;
           display: block;
           text-align: center;
           padding: 20px 0;
           font-size: 2rem;
           border-bottom: 1px solid black;
+          }
         }
 
         &:hover {
             text-decoration: underline;
-            color: black;
-            .opacity;
-            @small {
+            color: #000000;
+            .opacity(12);
+            @media @small {
               background: gray;
             }
         }
-      }
-    }
-
-    .logo {
+      .logo {
         align-self: flex-end;
         margin: 28px 0 0 91px;
-        @medium {
+        @media @medium {
           order: -1;
           display: block;
           margin: 30px auto 0;
         }
-        @small {
-          order -1;
-          margin: 20px 0;
+        @media @small {
+        order: -1;
+        margin: 20px 0;
         }
-    }
-  }// header
+      }
+    }// header
