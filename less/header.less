@@ -11,7 +11,7 @@ header {
       flex-wrap: wrap;
       justify-content: center;
     }
-  }
+
 
 
     nav {
@@ -19,26 +19,36 @@ header {
       width: 610px;
       justify-content: space-between;
       display: flex;
-      .box-shadow;
+      .box-shadow(0px 5px 10px rgba(0,0,0,0.5));
       @medium {
         width: 100%;
       }
-      @small {
+      @media @phone {
+       flex-direction: column;
         width: 100%;
         display: flex;
-        flex-direction: column;
         margin: 0;
         align-items: center;
       }
       a {
         text-decoration: none;
         color: #b0b0b0;
+        @small {
+          width: 100%;
+          display: block;
+          text-align: center;
+          padding: 20px 0;
+          font-size: 2rem;
+          border-bottom: 1px solid black;
+        }
 
         &:hover {
             text-decoration: underline;
             color: black;
             .opacity;
-
+            @small {
+              background: gray;
+            }
         }
       }
     }
@@ -46,10 +56,14 @@ header {
     .logo {
         align-self: flex-end;
         margin: 28px 0 0 91px;
-        @small {
+        @medium {
           order: -1;
           display: block;
           margin: 30px auto 0;
+        }
+        @small {
+          order -1;
+          margin: 20px 0;
         }
     }
   }// header
